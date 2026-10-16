@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COLECCIONES — Presentación Interactiva</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app" class="app-shell" aria-live="polite">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-dot"></div>
+        <div>
+          <div class="eyebrow">Fundamentos de Programación</div>
+          <h1>Colecciones · Presentación interactiva</h1>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="btnHelp" class="ghost-btn" title="Atajos">?</button>
+        <button id="btnFullscreen" class="ghost-btn" title="Pantalla completa">⛶</button>
+      </div>
+    </header>
+
+    <section class="stage">
+      <aside class="sidebar">
+        <div class="sidebar-title">Ruta de clase</div>
+        <nav id="slideNav" class="slide-nav"></nav>
+        <div class="teacher-note">
+          <strong>Idea docente:</strong>
+          <span>los conceptos se introducen con micro-pasos visuales y los ejercicios se resuelven línea por línea, congelando exactamente qué cambia en la colección después de cada instrucción.</span>
+        </div>
+      </aside>
+
+      <section class="presentation-area">
+        <div id="slide" class="slide"></div>
+
+        <footer class="controls">
+          <div class="control-left">
+            <button id="btnPrevSlide" class="secondary-btn">← Slide</button>
+            <button id="btnPrevStep" class="secondary-btn">← Paso</button>
+          </div>
+
+          <div class="progress-wrap">
+            <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+            <div id="progressText" class="progress-text"></div>
+          </div>
+
+          <div class="control-right">
+            <button id="btnNextStep" class="primary-btn">Siguiente paso →</button>
+            <button id="btnNextSlide" class="secondary-btn">Slide →</button>
+          </div>
+        </footer>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="helpDialog" class="help-dialog">
+    <h2>Atajos</h2>
+    <div class="shortcut-grid">
+      <kbd>→</kbd><span>Siguiente micro-paso</span>
+      <kbd>←</kbd><span>Micro-paso anterior</span>
+      <kbd>↓</kbd><span>Siguiente slide</span>
+      <kbd>↑</kbd><span>Slide anterior</span>
+      <kbd>Espacio</kbd><span>Siguiente micro-paso</span>
+      <kbd>F</kbd><span>Pantalla completa</span>
+      <kbd>R</kbd><span>Reiniciar slide</span>
+    </div>
+    <button id="btnCloseHelp" class="primary-btn">Cerrar</button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
